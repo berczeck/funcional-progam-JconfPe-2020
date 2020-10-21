@@ -41,7 +41,7 @@
 				[:mexico false] (update-in acc [:mexico :not-alive] conj person)
 				[:peru true] (update-in acc [:peru :alive] conj person)
 				[:peru false] (update-in acc [:peru :not-alive] conj person)))
-		{}
+		{:peru {:alive [] :not-alive []} :mexico {:alive [] :not-alive []}}
 		coll))
 
 (->> people
